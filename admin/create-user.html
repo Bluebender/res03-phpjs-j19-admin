@@ -19,26 +19,25 @@
         <h2>Créer un utilisateur</h2>
         <button id="returnButton">Revenir à la liste d'utilisateur</button>
         
-        <form>
+        <form action="" method="post">
             <fieldset>
                 <label>Pseudo</label>
-                <input type="text" name="username">
+                <input type="text" name="username" id="username">
             </fieldset>    
             <fieldset>
                 <label>Prénom</label>
-                <input type="text" name="firstName">
+                <input type="text" name="firstName" id="firstName">
             </fieldset>    
             <fieldset>
                 <label>Nom</label>
-                <input type="text" name="lastName">
+                <input type="text" name="lastName" id="lastName">
             </fieldset>    
             <fieldset>
                 <label>Email</label>
-                <input type="eamil" name="email">
+                <input type="eamil" name="email" id="email">
             </fieldset>    
-            <button>Créer</button>            
+            <button id="createButton">Créer</button>            
         </form>
-
     </main>
     
 <script type="module" src="assets/js/index.js"></script>

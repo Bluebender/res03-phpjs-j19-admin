@@ -1,4 +1,5 @@
 import { userDisplay } from './user.js';
+import { deleteUser } from './delete-user.js';
 
 function usersDisplay(){
 
@@ -67,10 +68,8 @@ function usersDisplay(){
             button3.setAttribute('userId',user.id);
             
         }
-        let openButton=document.querySelectorAll(".openButton");
-        let updateButton=document.querySelectorAll(".updateButton");
-        let deleteButton=document.querySelectorAll(".deleteButton");
 
+        let openButton=document.querySelectorAll(".openButton");
         for (let i=0; i<users.length; i++){
             openButton[i].addEventListener("click", function(){
                 let id=openButton[i].getAttribute('userid');
@@ -78,6 +77,26 @@ function usersDisplay(){
             });
         }
         
+        let updateButton=document.querySelectorAll(".updateButton");
+        for (let i=0; i<users.length; i++){
+            updateButton[i].addEventListener("click", function(){
+                let id=deleteButton[i].getAttribute('userid');
+                window.location.href="https://vincentollivier.sites.3wa.io/03-javascript/res03-js-j19-admin/admin/update-user.html?user_id=" + id; 
+            });
+        }
+
+        let deleteButton=document.querySelectorAll(".deleteButton");
+        for (let i=0; i<users.length; i++){
+            deleteButton[i].addEventListener("click", function(){
+                let id=deleteButton[i].getAttribute('userid');
+                deleteUser(id);
+            });
+        }
+        
+        let creatUser=document.getElementById("creatUser");
+        creatUser.addEventListener("click", function(){
+        window.location.href="https://vincentollivier.sites.3wa.io/03-javascript/res03-js-j19-admin/admin/create-user.html";
+    });
         
         
     });
